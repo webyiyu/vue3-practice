@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/index.ts"],
-  "sourcesContent": ["console.log('reactivity')"],
-  "mappings": ";;AAAA,UAAQ,IAAI,YAAY;",
+  "sourcesContent": ["console.log('reactivity')\r\n// \u5355\u4E2A\u5C5E\u6027\u7684\u7B80\u6613\u7248\u672C\r\nlet price = 10, quantity = 2, total = 0;\r\nconst dep = new Set(); //\u5B58\u50A8\u9700\u8981\u6267\u884C\u7684\u526F\u4F5C\u7528\uFF08\u5904\u7406\u903B\u8F91\u51FD\u6570\uFF09\r\nconst effect = ()=> {\r\n  total = price * quantity\r\n}\r\n// track \u7528\u4E8E\u6536\u96C6\u526F\u4F5C\u7528\r\nconst track = ()=> {\r\n  dep.add(effect)\r\n}\r\n// trigger \u7528\u4E8E\u89E6\u53D1 \u6267\u884C\u526F\u4F5C\u7528\r\nconst trigger = () => {\r\n  dep.forEach(effect => effect() )\r\n}\r\n\r\ntrack()\r\nconsole.log(`total1: ${total}`)\r\ntrigger()\r\nconsole.log(`total2: ${total}`)\r\nprice = 20\r\ntrigger()\r\nconsole.log(`total3: ${total}`)\r\n\r\n"],
+  "mappings": ";;AAAA,UAAQ,IAAI,YAAY;AAExB,MAAI,QAAQ;AAAZ,MAAgB,WAAW;AAA3B,MAA8B,QAAQ;AACtC,MAAM,MAAM,oBAAI,IAAI;AACpB,MAAM,SAAS,MAAK;AAClB,YAAQ,QAAQ;AAAA,EAClB;AAEA,MAAM,QAAQ,MAAK;AACjB,QAAI,IAAI,MAAM;AAAA,EAChB;AAEA,MAAM,UAAU,MAAM;AACpB,QAAI,QAAQ,aAAU,QAAO,CAAE;AAAA,EACjC;AAEA,QAAM;AACN,UAAQ,IAAI,WAAW,OAAO;AAC9B,UAAQ;AACR,UAAQ,IAAI,WAAW,OAAO;AAC9B,UAAQ;AACR,UAAQ;AACR,UAAQ,IAAI,WAAW,OAAO;",
   "names": []
 }
