@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/nodeOps.ts", "../src/patchProp.ts", "../src/index.ts"],
+  "sourcesContent": ["// \u5143\u7D20\u8282\u70B9\u7684api\u64CD\u4F5C\r\n// \u521B\u5EFA\u5143\u7D20 \u521B\u5EFA\u6587\u672C \u5143\u7D20\u7684\u589E\u5220\u6539\u67E5 \u83B7\u53D6\u7236\u5B50\u5173\u7CFB\u7B49\r\nexport const nodeOps = {\r\n  createElement(element) {\r\n    return document.createElement(element)\r\n  },\r\n  createText(text) {\r\n    return document.createTextNode(text)\r\n  }\r\n}", "// \u5C5E\u6027\u64CD\u4F5C\uFF0C\u7ED9\u5C5E\u6027\u6253\u8865\u4E01\r\n// \u4FEE\u6539\u7C7B\u540D\r\n// \u4FEE\u6539style\r\n\r\nexport const patchProps = {\r\n  \r\n}", "console.log('runtime-dom')\r\nimport { nodeOps } from './nodeOps'\r\nimport { patchProps } from './patchProp'\r\n\r\nconst node = {patchProps, ...nodeOps}\r\nconsole.log(node)"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAEO,MAAM,UAAU;AAAA,IACrB,cAAc,SAAS;AACrB,aAAO,SAAS,cAAc,OAAO;AAAA,IACvC;AAAA,IACA,WAAW,MAAM;AACf,aAAO,SAAS,eAAe,IAAI;AAAA,IACrC;AAAA,EACF;;;ACLO,MAAM,aAAa,CAE1B;;;ACNA,UAAQ,IAAI,aAAa;AAIzB,MAAM,OAAO,iBAAC,cAAe;AAC7B,UAAQ,IAAI,IAAI;",
+  "names": []
+}
