@@ -1,8 +1,11 @@
+import { IHomeState } from '@/typings/home'
 import { createStore } from 'vuex'
+import home from './modules/home'
 
-export default createStore({
-  state: {
-  },
+export interface IGlobalState {
+  home: IHomeState
+}
+const store =  createStore<IGlobalState>({
   getters: {
   },
   mutations: {
@@ -10,5 +13,9 @@ export default createStore({
   actions: {
   },
   modules: {
+    home
   }
 })
+
+export default store
+
